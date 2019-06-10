@@ -82,21 +82,21 @@ fit_unr1 <- bbdml(formula = cbind(W, M) ~ DayAmdmt, phi.formula = ~ DayAmdmt,
                   data = data_i, nstart = 5)
 g1 <- plot_bbdml_nolab(fit_unr1, color = "DayAmdmt")
 g11 <- g1 + scale_color_manual(values = hcl(seq(15, 375, length = 4)[2], 
-                                            l = c(45, 85), c = 100)) + 
-  annotate('text', x = 18, y = 0.030, 
-           label = "p[corncob]=='1.00'~x~10^{-6}~(H[0]: beta == 0)",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.028, 
-           label = "p[corncob]=='1.00'~x~10^{-6}~(H[0]: beta^'*' == 0)",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.026, label = "p[DESeq2]==3.58~x~10^{-15}",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.024, label = "p[edgeR]==4.96~x~10^{-13}",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.022, label = "p[metagenomeSeq]==0.0543",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.020, label = "p[ZIB]==0.00163",
-           parse = TRUE, size = 5, hjust = 0)
+                                            l = c(45, 85), c = 100)) #+ 
+  # annotate('text', x = 18, y = 0.030, 
+  #          label = "p[corncob]=='1.00'~x~10^{-6}~(H[0]: beta == 0)",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.028, 
+  #          label = "p[corncob]=='1.00'~x~10^{-6}~(H[0]: beta^'*' == 0)",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.026, label = "p[DESeq2]==3.58~x~10^{-15}",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.024, label = "p[edgeR]==4.96~x~10^{-13}",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.022, label = "p[metagenomeSeq]==0.0543",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.020, label = "p[ZIB]==0.00163",
+  #          parse = TRUE, size = 5, hjust = 0)
 
 
 i <- 13
@@ -106,21 +106,21 @@ fit_unr2 <-  bbdml(formula = cbind(W, M) ~ DayAmdmt, phi.formula = ~ DayAmdmt,
 
 g2 <- plot_bbdml_nolab(fit_unr2, color = "DayAmdmt")
 g22 <- g2 + scale_color_manual(values = hcl(seq(15, 375, length = 4)[1],
-                                            l = c(45, 85), c = 100)) + 
-  annotate('text', x = 18, y = 0.098, 
-           label = "p[corncob]==0.000735~(H[0]: beta == 0)",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.094, 
-           label = "p[corncob]==0.403~(H[0]: beta^'*' == 0)",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.09, label = "p[DESeq2]==0.00387",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.086, label = "p[edgeR]==0.143",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.082, label = "p[metagenomeSeq]==0.759",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.078, label = "p[ZIB]==0.000941",
-           parse = TRUE, size = 5, hjust = 0)
+                                            l = c(45, 85), c = 100)) #+ 
+  # annotate('text', x = 18, y = 0.098, 
+  #          label = "p[corncob]==0.000735~(H[0]: beta == 0)",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.094, 
+  #          label = "p[corncob]==0.403~(H[0]: beta^'*' == 0)",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.09, label = "p[DESeq2]==0.00387",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.086, label = "p[edgeR]==0.143",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.082, label = "p[metagenomeSeq]==0.759",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.078, label = "p[ZIB]==0.000941",
+  #          parse = TRUE, size = 5, hjust = 0)
 
 i <- 88
 data_i <- convert_phylo(soil, select = phyloseq::taxa_names(soil)[i])
@@ -128,21 +128,21 @@ fit_unr3 <-  bbdml(formula = cbind(W, M) ~ DayAmdmt, phi.formula = ~ DayAmdmt,
                    data = data_i, nstart = 5)
 g3 <- plot_bbdml_nolab(fit_unr3, color = "DayAmdmt")
 g33 <- g3 + scale_color_manual(values = hcl(seq(15, 375, length = 4)[3],
-                                            l = c(45, 85), c = 100)) + 
-  annotate('text', x = 18, y = 0.002, 
-           label = "p[corncob]==0.243~(H[0]: beta == 0)",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.0019, 
-           label = "p[corncob]==0.00871~(H[0]: beta^'*' == 0)",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.0018, label = "p[DESeq2]==0.496",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.0017, label = "p[edgeR]==0.743",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.0016, label = "p[metagenomeSeq]==0.791",
-           parse = TRUE, size = 5, hjust = 0) + 
-  annotate('text', x = 18, y = 0.0015, label = "p[ZIB]==0.757",
-           parse = TRUE, size = 5, hjust = 0)
+                                            l = c(45, 85), c = 100)) #+ 
+  # annotate('text', x = 18, y = 0.002, 
+  #          label = "p[corncob]==0.243~(H[0]: beta == 0)",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.0019, 
+  #          label = "p[corncob]==0.00871~(H[0]: beta^'*' == 0)",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.0018, label = "p[DESeq2]==0.496",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.0017, label = "p[edgeR]==0.743",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.0016, label = "p[metagenomeSeq]==0.791",
+  #          parse = TRUE, size = 5, hjust = 0) + 
+  # annotate('text', x = 18, y = 0.0015, label = "p[ZIB]==0.757",
+  #          parse = TRUE, size = 5, hjust = 0)
 
 pdf(file = 'examples.pdf',width = 24, height = 6)
 gridExtra::grid.arrange(g11, g22, g33, ncol = 3)
