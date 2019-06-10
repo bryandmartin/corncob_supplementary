@@ -33,5 +33,6 @@ ggplot(mydf, aes(x = x, y = value, color = variable)) +
   scale_color_discrete(labels = c(expression(paste("Differential Abundance ",
                                                    (H[0]: beta == 0))),
                                   expression(paste("Differential Variability ",
-                                                   (H[0]: beta^'*' == 0)))))
+                                                   (H[0]: beta^'*' == 0))))) +
+  theme(legend.text.align = 0)
 dev.off()
