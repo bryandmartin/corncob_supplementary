@@ -60,3 +60,63 @@ gridExtra::grid.arrange(g1, g2, g3, myleg, layout_matrix = rbind(c(1,2,3),
                                                             c(4,4,4)))
 dev.off()
 
+#####
+# Code to get results for Table
+#####
+
+# for (i in 5:8) {
+#   tmp <- round(quantile(tmp1[1:10000, i],
+#                         probs = c(0.05, 0.25, 0.5, 0.75, 0.95)), 3)
+#   tmp <- as.character(tmp)
+#   print(paste(paste(tmp, collapse = " & "), "\\"))
+# }
+# for (i in 5:8) {
+#   tmp <- round(quantile(tmp1[10001:20000, i],
+#                         probs = c(0.05, 0.25, 0.5, 0.75, 0.95)), 3)
+#   tmp <- as.character(tmp)
+#   print(paste(paste(tmp, collapse = " & "), "\\"))
+# }
+# for (i in 5:8) {
+#   tmp <- round(quantile(tmp1[20001:30000, i],
+#                         probs = c(0.05, 0.25, 0.5, 0.75, 0.95)), 3)
+#   tmp <- as.character(tmp)
+#   print(paste(paste(tmp, collapse = " & "), "\\"))
+# }
+# 
+# for (i in 5:8) {
+#   tmp <- round(quantile(tmp2[1:10000, i],
+#                         probs = c(0.05, 0.25, 0.5, 0.75, 0.95)), 3)
+#   tmp <- as.character(tmp)
+#   print(paste(paste(tmp, collapse = " & "), "\\"))
+# }
+# for (i in 5:8) {
+#   tmp <- round(quantile(tmp2[10001:20000, i],
+#                         probs = c(0.05, 0.25, 0.5, 0.75, 0.95)), 3)
+#   tmp <- as.character(tmp)
+#   print(paste(paste(tmp, collapse = " & "), "\\"))
+# }
+# for (i in 5:8) {
+#   tmp <- round(quantile(tmp2[20001:30000, i],
+#                         probs = c(0.05, 0.25, 0.5, 0.75, 0.95)), 3)
+#   tmp <- as.character(tmp)
+#   print(paste(paste(tmp, collapse = " & "), "\\"))
+# }
+# 
+# for (i in 5:8) {
+#   tmp <- round(quantile(tmp3[1:10000, i],
+#                         probs = c(0.05, 0.25, 0.5, 0.75, 0.95)), 3)
+#   tmp <- as.character(tmp)
+#   print(paste(paste(tmp, collapse = " & "), "\\"))
+# }
+# for (i in 5:8) {
+#   tmp <- round(quantile(tmp3[10001:20000, i],
+#                         probs = c(0.05, 0.25, 0.5, 0.75, 0.95)), 3)
+#   tmp <- as.character(tmp)
+#   print(paste(paste(tmp, collapse = " & "), "\\"))
+# }
+# for (i in 5:8) {
+#   tmp <- round(quantile(tmp3[20001:30000, i],
+#                         probs = c(0.05, 0.25, 0.5, 0.75, 0.95)), 3)
+#   tmp <- as.character(tmp)
+#   print(paste(paste(tmp, collapse = " & "), "\\"))
+# }
